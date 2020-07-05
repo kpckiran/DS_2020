@@ -53,13 +53,11 @@ def random_pick(population, probabilities):
         
 def reproduce(x, y): #doing cross_over between two chromosomes
     n = len(x)
-    print("reproduce length" + str(n))
     c = random.randint(0, n - 1)
     return x[0:c] + y[c:n]
 
 def mutate(x):  #randomly changing the value of a random index of a chromosome
     n = len(x)
-    print("mutate length" + str(n))
     c = random.randint(0, n - 1)
     #m = random.randint(1, n)
     m = random.randint(0, n-1)
