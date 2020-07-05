@@ -87,15 +87,8 @@ def print_chromosome(chrom):
 
 if __name__ == "__main__":
 
-    create_time = str(datetime.now().strftime("%Y%m%d%H%M%S"))
-    print(create_time)
-    log_file = r"/export/home/srv_cdwdapp/testpk/ds2020/dslog/" + "nqueen_" + create_time + ".log"
-
-    #sys.stdout = open(log_file, 'wt')
-    print("Start")
-
-    nq = int(input("Enter Number of Queens: ")) #say N = 8
-    sys.stdout = open(log_file, 'wt')
+    #nq = int(input("Enter Number of Queens: ")) #say N = 8
+    nq = 8
     maxFitness = (nq*(nq-1))/2  # 8*7/2 = 28
     population = [random_chromosome(nq) for _ in range(100)]
     print(population)  
